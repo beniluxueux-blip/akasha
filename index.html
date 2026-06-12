@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,8 +18,7 @@ h1{font-size:52px;font-weight:900;letter-spacing:10px;background:linear-gradient
 .services{padding:40px 16px;max-width:600px;margin:0 auto}
 .sec-title{color:#D4AF37;font-size:11px;letter-spacing:3px;margin-bottom:20px;text-align:center}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{background:#100005;border:1px solid #2A0010;border-radius:16px;padding:18px;cursor:pointer}
-.card:hover{border-color:#FF0022}
+.card{background:#100005;border:1px solid #2A0010;border-radius:16px;padding:18px}
 .card-icon{font-size:30px;margin-bottom:8px}
 .card-title{color:#fff;font-weight:700;font-size:13px;font-family:Arial,sans-serif}
 .card-desc{color:#885566;font-size:11px;margin-top:4px;font-family:Arial,sans-serif}
@@ -31,10 +31,16 @@ h1{font-size:52px;font-weight:900;letter-spacing:10px;background:linear-gradient
 .plan-features{list-style:none;margin:14px 0}
 .plan-features li{color:#FFF8E1;font-size:12px;padding:5px 0;border-bottom:1px solid #2A0010;font-family:Arial,sans-serif}
 .plan-features li:before{content:"✓ ";color:#D4AF37}
-.plan-btn{width:100%;background:linear-gradient(135deg,#8B0000,#FF0022);border:none;color:#fff;padding:12px;border-radius:10px;cursor:pointer;font-weight:900;font-size:14px;margin-top:14px;letter-spacing:1px}
+.pay-box{background:rgba(255,0,34,.06);border:1px solid rgba(255,0,34,.3);border-radius:14px;padding:20px;margin-top:16px}
+.pay-title{color:#FF0022;font-size:12px;letter-spacing:2px;margin-bottom:14px;font-family:Arial,sans-serif;font-weight:700}
+.pay-btn{display:block;width:100%;padding:14px;border-radius:12px;border:none;font-weight:900;font-size:14px;cursor:pointer;margin-bottom:10px;letter-spacing:1px;text-align:center;text-decoration:none}
+.mtn{background:linear-gradient(135deg,#FFCC00,#FF9900);color:#000}
+.moov{background:linear-gradient(135deg,#0066CC,#0044AA);color:#fff}
+.pay-num{font-size:16px;font-weight:900;margin-top:4px}
+.pay-inst{color:#885566;font-size:11px;margin-top:8px;font-family:Arial,sans-serif;line-height:1.6}
 .footer{text-align:center;padding:30px 20px;border-top:1px solid #2A0010;color:#885566;font-size:12px;font-family:Arial,sans-serif}
 .gold{color:#D4AF37}
-.revenue{background:rgba(255,0,34,.06);border:1px solid rgba(255,0,34,.2);border-radius:16px;padding:20px;margin:20px 16px;max-width:600px;margin-left:auto;margin-right:auto}
+.revenue{background:rgba(255,0,34,.06);border:1px solid rgba(255,0,34,.2);border-radius:16px;padding:20px;margin:0 16px 20px;max-width:600px;margin-left:auto;margin-right:auto}
 .rev-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;text-align:center;margin-top:14px}
 .rev-box{background:rgba(255,255,255,.03);border-radius:10px;padding:12px}
 .rev-num{color:#D4AF37;font-size:18px;font-weight:900}
@@ -48,60 +54,4 @@ h1{font-size:52px;font-weight:900;letter-spacing:10px;background:linear-gradient
 <h1>AKASHA</h1>
 <p class="sub">by Del Gruiner</p>
 <p class="tagline">La super-app de Cotonou & du Bénin</p>
-<a href="#services" class="btn">Découvrir →</a>
-<a href="#plans" class="btn btn2">S'inscrire</a>
-</div>
-
-<div class="services" id="services">
-<p class="sec-title">NOS SERVICES</p>
-<div class="grid">
-<div class="card"><div class="card-icon">💸</div><div class="card-title">Paiements</div><div class="card-desc">MTN MoMo · Moov Money</div></div>
-<div class="card"><div class="card-icon">💞</div><div class="card-title">Rencontres</div><div class="card-desc">Trouve ton âme sœur</div></div>
-<div class="card"><div class="card-icon">🏠</div><div class="card-title">Services</div><div class="card-desc">Nettoyage, déménagement</div></div>
-<div class="card"><div class="card-icon">🌿</div><div class="card-title">Bien-être</div><div class="card-desc">Coaching & méditation</div></div>
-<div class="card"><div class="card-icon">💼</div><div class="card-title">Emploi</div><div class="card-desc">Missions & opportunités</div></div>
-<div class="card"><div class="card-icon">✨</div><div class="card-title">Astrologie</div><div class="card-desc">Compatibilité & guidance</div></div>
-</div>
-</div>
-
-<div class="revenue">
-<p style="color:#FF0022;font-size:11px;letter-spacing:2px;font-family:Arial,sans-serif">📊 TON POTENTIEL DE REVENUS</p>
-<div class="rev-grid">
-<div class="rev-box"><div class="rev-num">500</div><div class="rev-label">membres</div><div class="rev-amount">1,25M FCFA</div></div>
-<div class="rev-box"><div class="rev-num">1 000</div><div class="rev-label">membres</div><div class="rev-amount">2,5M FCFA</div></div>
-<div class="rev-box"><div class="rev-num">5 000</div><div class="rev-label">membres</div><div class="rev-amount">12,5M FCFA</div></div>
-</div>
-</div>
-
-<div class="plans" id="plans">
-<p class="sec-title">ABONNEMENTS</p>
-<div class="plan">
-<div class="plan-name">VISITEUR</div>
-<div class="plan-price">0 <span style="font-size:16px">FCFA</span></div>
-<div class="plan-period">Toujours gratuit</div>
-<ul class="plan-features"><li>Accès limité</li><li>3 transferts/mois</li><li>Profils floutés</li></ul>
-<button class="plan-btn" style="background:#2A0010;border:1px solid #885566">Commencer gratuit</button>
-</div>
-<div class="plan popular">
-<div class="plan-name">⭐ AKASHA STAR — POPULAIRE</div>
-<div class="plan-price">2 500 <span style="font-size:16px">FCFA</span></div>
-<div class="plan-period">par mois</div>
-<ul class="plan-features"><li>Transferts illimités</li><li>Rencontres débloquées</li><li>Tous les services</li><li>Coaching mensuel</li></ul>
-<button class="plan-btn">Devenir Star →</button>
-</div>
-<div class="plan">
-<div class="plan-name" style="color:#FF0022">DEL GRUINER ELITE</div>
-<div class="plan-price" style="color:#FF0022">9 900 <span style="font-size:16px">FCFA</span></div>
-<div class="plan-period">par mois</div>
-<ul class="plan-features"><li>Tout Star inclus</li><li>Boost profil x3</li><li>Astrologie & guidance</li><li>Médecin en ligne</li><li>Priorité absolue</li></ul>
-<button class="plan-btn" style="background:linear-gradient(135deg,#FF0022,#D4AF37)">Rejoindre l'Elite →</button>
-</div>
-</div>
-
-<div class="footer">
-<p class="gold" style="font-size:18px;font-weight:700;margin-bottom:6px">AKASHA by Del Gruiner</p>
-<p>Cotonou · Fidjrossè · Aïbatin · Akpakpa</p>
-<p style="margin-top:8px">© 2025 Del Gruiner · Tous droits réservés</p>
-</div>
-</body>
-</html>
+<a href="#plans" class="btn"
