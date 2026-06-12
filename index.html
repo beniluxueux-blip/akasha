@@ -7,51 +7,273 @@
 <title>AKASHA by Del Gruiner</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#080000;font-family:Georgia,serif;color:#fff;min-height:100vh}
-.hero{background:radial-gradient(ellipse at 50% 0%,rgba(255,0,34,.2),transparent 60%);text-align:center;padding:60px 20px 40px}
-.flame{font-size:60px;filter:drop-shadow(0 0 20px #FF0022);margin-bottom:16px}
-h1{font-size:52px;font-weight:900;letter-spacing:10px;background:linear-gradient(135deg,#FF0022,#FF3355,#D4AF37);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.sub{color:#D4AF37;font-size:13px;letter-spacing:5px;margin:8px 0 16px}
-.tagline{color:#885566;font-size:14px;margin-bottom:40px}
-.btn{display:inline-block;background:linear-gradient(135deg,#8B0000,#FF0022,#D4AF37);color:#fff;padding:16px 36px;border-radius:14px;font-size:17px;font-weight:900;letter-spacing:2px;text-decoration:none;box-shadow:0 8px 40px rgba(255,0,34,.4);margin:8px}
+body{background:#080000;font-family:Georgia,serif;color:#fff}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;background:radial-gradient(ellipse at 50% 30%,rgba(255,0,34,.25),transparent 65%)}
+.flame{font-size:64px;margin-bottom:20px}
+h1{font-size:56px;font-weight:900;letter-spacing:12px;color:#FF0022;text-shadow:0 0 30px rgba(255,0,34,.6);margin-bottom:10px}
+.sub{color:#D4AF37;font-size:14px;letter-spacing:6px;margin-bottom:8px}
+.tagline{color:#885566;font-size:15px;margin-bottom:16px}
+.badge{display:inline-block;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.3);color:#D4AF37;font-size:11px;padding:6px 16px;border-radius:100px;letter-spacing:2px;margin-bottom:32px}
+.btns{display:flex;flex-direction:column;gap:12px;width:100%;max-width:320px}
+.btn{display:block;padding:16px;border-radius:14px;font-size:16px;font-weight:900;letter-spacing:2px;text-decoration:none;text-align:center}
+.btn1{background:linear-gradient(135deg,#8B0000,#FF0022,#D4AF37);color:#fff;box-shadow:0 8px 40px rgba(255,0,34,.4)}
 .btn2{background:transparent;border:1px solid #D4AF37;color:#D4AF37}
-.services{padding:40px 16px;max-width:600px;margin:0 auto}
-.sec-title{color:#D4AF37;font-size:11px;letter-spacing:3px;margin-bottom:20px;text-align:center}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#2A0010;border-radius:14px;overflow:hidden;width:100%;max-width:360px;margin-top:32px}
+.stat{background:#100005;padding:16px 8px;text-align:center}
+.stat-num{color:#D4AF37;font-size:20px;font-weight:900}
+.stat-label{color:#885566;font-size:10px;font-family:Arial,sans-serif;margin-top:2px}
+section{padding:40px 16px;max-width:500px;margin:0 auto}
+.sec-title{color:#D4AF37;font-size:11px;letter-spacing:3px;margin-bottom:20px;text-align:center;font-family:Arial,sans-serif}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .card{background:#100005;border:1px solid #2A0010;border-radius:16px;padding:18px}
-.card-icon{font-size:30px;margin-bottom:8px}
+.card-icon{font-size:32px;margin-bottom:10px}
 .card-title{color:#fff;font-weight:700;font-size:13px;font-family:Arial,sans-serif}
 .card-desc{color:#885566;font-size:11px;margin-top:4px;font-family:Arial,sans-serif}
-.plans{padding:40px 16px;max-width:600px;margin:0 auto}
+.card-free{display:inline-block;background:rgba(0,200,100,.1);border:1px solid rgba(0,200,100,.3);color:#00C864;font-size:10px;padding:2px 8px;border-radius:100px;margin-top:6px;font-family:Arial,sans-serif}
+.verset-box{background:linear-gradient(135deg,rgba(212,175,55,.1),rgba(255,255,255,.03));border:1px solid rgba(212,175,55,.3);border-radius:20px;padding:28px 20px;margin:0 16px 20px;max-width:500px;margin-left:auto;margin-right:auto;text-align:center}
+.verset-icon{font-size:40px;margin-bottom:12px}
+.verset-title{color:#D4AF37;font-size:13px;letter-spacing:3px;margin-bottom:16px;font-family:Arial,sans-serif;font-weight:700}
+.verset-text{color:#FFF8E1;font-size:15px;line-height:1.9;font-style:italic;margin-bottom:12px}
+.verset-ref{color:#D4AF37;font-size:13px;font-weight:700;font-family:Arial,sans-serif}
+.notif-btn{display:block;width:100%;background:linear-gradient(135deg,#1a4a1a,#2d8a2d);border:1px solid rgba(0,200,100,.3);color:#fff;padding:14px;border-radius:12px;cursor:pointer;font-weight:900;font-size:14px;margin-top:16px;letter-spacing:1px;font-family:Arial,sans-serif}
+.notif-status{color:#00C864;font-size:12px;margin-top:8px;font-family:Arial,sans-serif;display:none}
+.foi{background:linear-gradient(135deg,rgba(212,175,55,.08),rgba(255,255,255,.03));border:1px solid rgba(212,175,55,.25);border-radius:20px;padding:28px 20px;margin:0 16px 20px;max-width:500px;margin-left:auto;margin-right:auto;text-align:center}
+.foi-icon{font-size:48px;margin-bottom:16px}
+.foi-title{color:#D4AF37;font-size:18px;font-weight:900;letter-spacing:3px;margin-bottom:8px}
+.foi-desc{color:#885566;font-size:13px;line-height:1.8;font-family:Arial,sans-serif;margin-bottom:16px}
+.foi-free{display:inline-block;background:rgba(0,200,100,.1);border:1px solid rgba(0,200,100,.3);color:#00C864;font-size:12px;padding:6px 20px;border-radius:100px;font-family:Arial,sans-serif;font-weight:700;letter-spacing:2px}
+.foi-list{list-style:none;margin:16px 0;text-align:left}
+.foi-list li{color:#FFF8E1;font-size:13px;padding:8px 0;border-bottom:1px solid rgba(212,175,55,.1);font-family:Arial,sans-serif}
+.foi-list li:before{content:"🙏 "}
+.testi{background:#100005;border:1px solid #2A0010;border-radius:16px;padding:20px;margin-bottom:12px}
+.testi-text{color:#FFF8E1;font-size:13px;line-height:1.7;font-style:italic;font-family:Arial,sans-serif}
+.testi-name{color:#D4AF37;font-size:12px;font-weight:700;margin-top:12px;font-family:Arial,sans-serif}
+.testi-stars{color:#FF0022;font-size:14px;margin-top:4px}
 .plan{background:#100005;border:2px solid #2A0010;border-radius:18px;padding:24px;margin-bottom:14px}
-.plan.popular{border-color:#D4AF37}
+.plan.pop{border-color:#D4AF37;position:relative}
+.pop-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#D4AF37,#F5D060);color:#000;font-size:10px;font-weight:900;padding:4px 16px;border-radius:100px;white-space:nowrap;font-family:Arial,sans-serif}
 .plan-name{color:#D4AF37;font-weight:700;font-size:14px;letter-spacing:1px;font-family:Arial,sans-serif}
-.plan-price{color:#D4AF37;font-size:32px;font-weight:900;margin:8px 0 4px}
-.plan-period{color:#885566;font-size:12px;font-family:Arial,sans-serif}
-.plan-features{list-style:none;margin:14px 0}
-.plan-features li{color:#FFF8E1;font-size:12px;padding:5px 0;border-bottom:1px solid #2A0010;font-family:Arial,sans-serif}
-.plan-features li:before{content:"✓ ";color:#D4AF37}
-.pay-box{background:rgba(255,0,34,.06);border:1px solid rgba(255,0,34,.3);border-radius:14px;padding:20px;margin-top:16px}
-.pay-title{color:#FF0022;font-size:12px;letter-spacing:2px;margin-bottom:14px;font-family:Arial,sans-serif;font-weight:700}
-.pay-btn{display:block;width:100%;padding:14px;border-radius:12px;border:none;font-weight:900;font-size:14px;cursor:pointer;margin-bottom:10px;letter-spacing:1px;text-align:center;text-decoration:none}
+.plan-price{color:#D4AF37;font-size:34px;font-weight:900;margin:8px 0 4px}
+.plan-period{color:#885566;font-size:12px;font-family:Arial,sans-serif;margin-bottom:14px}
+.plan ul{list-style:none;margin-bottom:16px}
+.plan ul li{color:#FFF8E1;font-size:12px;padding:5px 0;border-bottom:1px solid #2A0010;font-family:Arial,sans-serif}
+.plan ul li:before{content:"✓ ";color:#D4AF37}
+.pay-box{background:rgba(255,0,34,.05);border:1px solid rgba(255,0,34,.25);border-radius:12px;padding:16px}
+.pay-title{color:#FF0022;font-size:11px;letter-spacing:2px;margin-bottom:12px;font-family:Arial,sans-serif;font-weight:700}
+.pay-btn{display:block;width:100%;padding:14px;border-radius:10px;border:none;font-weight:900;font-size:13px;cursor:pointer;margin-bottom:8px;text-align:center;text-decoration:none;letter-spacing:1px}
 .mtn{background:linear-gradient(135deg,#FFCC00,#FF9900);color:#000}
 .moov{background:linear-gradient(135deg,#0066CC,#0044AA);color:#fff}
-.pay-num{font-size:16px;font-weight:900;margin-top:4px}
-.pay-inst{color:#885566;font-size:11px;margin-top:8px;font-family:Arial,sans-serif;line-height:1.6}
-.footer{text-align:center;padding:30px 20px;border-top:1px solid #2A0010;color:#885566;font-size:12px;font-family:Arial,sans-serif}
-.gold{color:#D4AF37}
-.revenue{background:rgba(255,0,34,.06);border:1px solid rgba(255,0,34,.2);border-radius:16px;padding:20px;margin:0 16px 20px;max-width:600px;margin-left:auto;margin-right:auto}
-.rev-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;text-align:center;margin-top:14px}
-.rev-box{background:rgba(255,255,255,.03);border-radius:10px;padding:12px}
-.rev-num{color:#D4AF37;font-size:18px;font-weight:900}
-.rev-label{color:#885566;font-size:10px;font-family:Arial,sans-serif}
-.rev-amount{color:#FF0022;font-size:12px;font-weight:700;margin-top:4px;font-family:Arial,sans-serif}
+.pay-num{font-size:15px;font-weight:900;margin-top:2px}
+.pay-inst{color:#885566;font-size:11px;margin-top:10px;font-family:Arial,sans-serif;line-height:1.6}
+.vip{background:linear-gradient(135deg,rgba(255,0,34,.1),rgba(212,175,55,.08));border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:24px;margin:0 16px 20px;max-width:500px;margin-left:auto;margin-right:auto;text-align:center}
+.vip-title{color:#D4AF37;font-size:16px;font-weight:900;letter-spacing:3px;margin-bottom:8px}
+.vip-desc{color:#885566;font-size:13px;line-height:1.6;font-family:Arial,sans-serif}
+footer{text-align:center;padding:32px 20px;border-top:1px solid #2A0010;font-family:Arial,sans-serif}
 </style>
 </head>
 <body>
+
 <div class="hero">
 <div class="flame">🔥</div>
 <h1>AKASHA</h1>
 <p class="sub">by Del Gruiner</p>
 <p class="tagline">La super-app de Cotonou & du Bénin</p>
-<a href="#plans" class="btn"
+<div class="badge">✦ PLATEFORME N°1 AU BÉNIN ✦</div>
+<div class="btns">
+<a href="#plans" class="btn btn1">Rejoindre AKASHA →</a>
+<a href="#services" class="btn btn2">Découvrir les services</a>
+</div>
+<div class="stats">
+<div class="stat"><div class="stat-num">2 500</div><div class="stat-label">FCFA/mois</div></div>
+<div class="stat"><div class="stat-num">7+</div><div class="stat-label">Services</div></div>
+<div class="stat"><div class="stat-num">24/7</div><div class="stat-label">Disponible</div></div>
+</div>
+</div>
+
+<div class="verset-box" id="verset">
+<div class="verset-icon">✝️</div>
+<div class="verset-title">VERSET DU JOUR</div>
+<div class="verset-text" id="verset-text">Chargement...</div>
+<div class="verset-ref" id="verset-ref"></div>
+<button class="notif-btn" onclick="activerNotifications()">🔔 Recevoir le verset chaque matin</button>
+<div class="notif-status" id="notif-status">✅ Tu recevras le verset chaque matin à 7h !</div>
+</div>
+
+<div class="foi">
+<div class="foi-icon">🕊️</div>
+<div class="foi-title">FOI & PRIÈRE</div>
+<div class="foi-desc">AKASHA accompagne ceux qui cherchent la face de Dieu. Un espace sacré de prière, d'évangile et de soutien spirituel — ouvert à tous, gratuitement.</div>
+<div class="foi-free">✓ GRATUIT POUR TOUS</div>
+<ul class="foi-list">
+<li>Prière guidée du matin & du soir</li>
+<li>Évangile du jour</li>
+<li>Accompagnement dans les épreuves</li>
+<li>Communauté de foi & entraide</li>
+<li>Méditation biblique</li>
+</ul>
+</div>
+
+<section id="services">
+<p class="sec-title">NOS SERVICES</p>
+<div class="grid">
+<div class="card"><div class="card-icon">🕊️</div><div class="card-title">Foi & Prière</div><div class="card-desc">Évangile & accompagnement</div><span class="card-free">GRATUIT</span></div>
+<div class="card"><div class="card-icon">💸</div><div class="card-title">Paiements</div><div class="card-desc">MTN MoMo · Moov Money</div></div>
+<div class="card"><div class="card-icon">💞</div><div class="card-title">Rencontres</div><div class="card-desc">Trouve ton âme sœur</div></div>
+<div class="card"><div class="card-icon">🏠</div><div class="card-title">Services</div><div class="card-desc">Nettoyage, déménagement</div></div>
+<div class="card"><div class="card-icon">🌿</div><div class="card-title">Bien-être</div><div class="card-desc">Coaching & méditation</div></div>
+<div class="card"><div class="card-icon">💼</div><div class="card-title">Emploi</div><div class="card-desc">Missions & opportunités</div></div>
+<div class="card"><div class="card-icon">✨</div><div class="card-title">Astrologie</div><div class="card-desc">Compatibilité & guidance</div></div>
+<div class="card"><div class="card-icon">❤️‍🩹</div><div class="card-title">Santé</div><div class="card-desc">Médecin en ligne</div></div>
+</div>
+</section>
+
+<section>
+<p class="sec-title">ILS TÉMOIGNENT</p>
+<div class="testi">
+<div class="testi-text">"Le verset du matin me donne la force pour toute la journée. AKASHA est bien plus qu'une app."</div>
+<div class="testi-name">Pasteur Emmanuel K. — Fidjrossè</div>
+<div class="testi-stars">★★★★★</div>
+</div>
+<div class="testi">
+<div class="testi-text">"Grâce à AKASHA j'ai trouvé mon équipe de nettoyage en moins d'une heure. Service impeccable."</div>
+<div class="testi-name">Kofi A. — Akpakpa</div>
+<div class="testi-stars">★★★★★</div>
+</div>
+<div class="testi">
+<div class="testi-text">"L'application est élégante et sérieuse. J'ai fait ma première rencontre sincère ici. Je recommande."</div>
+<div class="testi-name">Adjoua M. — Aïbatin</div>
+<div class="testi-stars">★★★★★</div>
+</div>
+</section>
+
+<div class="vip">
+<div class="vip-title">✦ ESPACE VIP ✦</div>
+<div class="vip-desc">Les membres Elite bénéficient d'un accès prioritaire à tous les services, d'un coaching personnalisé et d'une visibilité maximale sur la plateforme.</div>
+</div>
+
+<section id="plans">
+<p class="sec-title">ABONNEMENTS</p>
+<div class="plan">
+<div class="plan-name">VISITEUR</div>
+<div class="plan-price">0 <span style="font-size:16px">FCFA</span></div>
+<div class="plan-period">Toujours gratuit</div>
+<ul><li>Verset biblique quotidien</li><li>Foi & Prière illimitée</li><li>3 transferts/mois</li><li>Profils floutés</li></ul>
+<div class="pay-box">
+<div class="pay-title">✅ GRATUIT</div>
+<p class="pay-inst">Inscris-toi gratuitement et reçois le verset chaque matin.</p>
+</div>
+</div>
+<div class="plan pop">
+<div class="pop-badge">⭐ LE PLUS POPULAIRE</div>
+<div class="plan-name">AKASHA STAR</div>
+<div class="plan-price">2 500 <span style="font-size:16px">FCFA</span></div>
+<div class="plan-period">par mois</div>
+<ul><li>Verset & prière quotidiens</li><li>Transferts illimités</li><li>Rencontres débloquées</li><li>Tous les services</li><li>Coaching mensuel</li></ul>
+<div class="pay-box">
+<div class="pay-title">💳 PAYER MON ABONNEMENT</div>
+<a class="pay-btn mtn" href="tel:*126*1*1*0197019508*2500#">💛 MTN MoMo — 2 500 FCFA<div class="pay-num">0197019508</div></a>
+<a class="pay-btn moov" href="tel:*155*1*1*0195121993*2500#">🔵 Moov Money — 2 500 FCFA<div class="pay-num">0195121993</div></a>
+<p class="pay-inst">Après paiement envoie ton nom par WhatsApp au +229 01 97 01 95 08 pour activation immédiate.</p>
+</div>
+</div>
+<div class="plan">
+<div class="plan-name" style="color:#FF0022">DEL GRUINER ELITE</div>
+<div class="plan-price" style="color:#FF0022">9 900 <span style="font-size:16px">FCFA</span></div>
+<div class="plan-period">par mois</div>
+<ul><li>Tout Star inclus</li><li>Boost profil x3</li><li>Astrologie & guidance</li><li>Médecin en ligne</li><li>Priorité absolue</li></ul>
+<div class="pay-box">
+<div class="pay-title">💳 PAYER MON ABONNEMENT</div>
+<a class="pay-btn mtn" href="tel:*126*1*1*0197019508*9900#">💛 MTN MoMo — 9 900 FCFA<div class="pay-num">0197019508</div></a>
+<a class="pay-btn moov" href="tel:*155*1*1*0195121993*9900#">🔵 Moov Money — 9 900 FCFA<div class="pay-num">0195121993</div></a>
+<p class="pay-inst">Après paiement envoie ton nom par WhatsApp au +229 01 97 01 95 08 pour activation immédiate.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p style="color:#D4AF37;font-size:20px;font-weight:900;margin-bottom:8px;font-family:Georgia,serif">AKASHA by Del Gruiner</p>
+<p style="color:#885566;margin-bottom:4px">Cotonou · Fidjrossè · Aïbatin · Akpakpa</p>
+<p style="color:#885566;margin-bottom:4px">📞 WhatsApp : +229 01 97 01 95 08</p>
+<p style="color:#2A0010;margin-top:12px">© 2025 Del Gruiner · Tous droits réservés</p>
+</footer>
+
+<script>
+const versets = [
+"Car c'est moi qui connais les projets que j'ai formés sur vous, dit l'Éternel, projets de paix et non de malheur, afin de vous donner un avenir et de l'espérance.|Jérémie 29:11",
+"Je puis tout par celui qui me fortifie.|Philippiens 4:13",
+"L'Éternel est mon berger : je ne manquerai de rien.|Psaume 23:1",
+"Confie-toi en l'Éternel de tout ton cœur, et ne t'appuie pas sur ta sagesse.|Proverbes 3:5",
+"Cherchez premièrement le royaume et la justice de Dieu ; et toutes ces choses vous seront données par-dessus.|Matthieu 6:33",
+"Ne vous inquiétez de rien ; mais en toute chose faites connaître vos besoins à Dieu par des prières et des supplications, avec des actions de grâces.|Philippiens 4:6",
+"Dieu est notre refuge et notre force, un secours qui ne manque jamais dans la détresse.|Psaume 46:2",
+"Car Dieu a tant aimé le monde qu'il a donné son Fils unique.|Jean 3:16",
+"Soyez forts et courageux. Ne craignez point et ne vous effrayez point devant eux ; car l'Éternel, ton Dieu, marchera avec toi, il ne te délaissera point et ne t'abandonnera point.|Deutéronome 31:6",
+"Heureux les hommes de cœur pur, car ils verront Dieu.|Matthieu 5:8",
+"L'Éternel bénira ton entrée et ta sortie, dès maintenant et à jamais.|Psaume 121:8",
+"Que la paix de Dieu, qui surpasse toute intelligence, garde vos cœurs et vos pensées en Jésus-Christ.|Philippiens 4:7",
+"Tu me feras connaître le chemin de la vie ; il y a d'abondantes joies devant ta face.|Psaume 16:11",
+"L'Éternel t'accordera toujours sa grâce et rassasiera ton âme dans les lieux arides.|Ésaïe 58:11",
+"Remets ton sort à l'Éternel, mets en lui ta confiance, et il agira.|Psaume 37:5",
+"Que toutes vos choses se fassent avec charité.|1 Corinthiens 16:14",
+"L'Éternel est proche de ceux qui ont le cœur brisé, et il sauve ceux qui ont l'esprit dans l'abattement.|Psaume 34:19",
+"Ne te lasse pas de faire le bien.|2 Thessaloniciens 3:13",
+"Celui qui demeure sous l'abri du Très-Haut repose à l'ombre du Tout-Puissant.|Psaume 91:1",
+"En toutes choses nous sommes plus que vainqueurs par celui qui nous a aimés.|Romains 8:37",
+"Car je suis persuadé que ni la mort ni la vie ne pourront nous séparer de l'amour de Dieu.|Romains 8:38",
+"Dieu n'est pas injuste pour oublier votre travail et l'amour que vous avez montré pour son nom.|Hébreux 6:10",
+"L'Éternel est ma lumière et mon salut : de qui aurais-je crainte ?|Psaume 27:1",
+"Voici, je me tiens à la porte, et je frappe. Si quelqu'un entend ma voix et ouvre la porte, j'entrerai chez lui.|Apocalypse 3:20",
+"Celui qui croit en moi aura des fleuves d'eau vive qui couleront de son sein.|Jean 7:38",
+"Venez à moi, vous tous qui êtes fatigués et chargés, et je vous donnerai du repos.|Matthieu 11:28",
+"Je suis le chemin, la vérité et la vie.|Jean 14:6",
+"L'amour est patient, il est plein de bonté.|1 Corinthiens 13:4",
+"Que votre lumière luise ainsi devant les hommes, afin qu'ils voient vos bonnes œuvres.|Matthieu 5:16",
+"Sois fort et courageux, ne t'effraie pas, car l'Éternel ton Dieu est avec toi.|Josué 1:9"
+];
+
+function afficherVerset() {
+  const today = new Date();
+  const idx = (today.getDate() + today.getMonth() * 30) % versets.length;
+  const parts = versets[idx].split("|");
+  document.getElementById("verset-text").textContent = "« " + parts[0] + " »";
+  document.getElementById("verset-ref").textContent = "— " + parts[1];
+}
+
+function activerNotifications() {
+  if ("Notification" in window) {
+    Notification.requestPermission().then(function(permission) {
+      if (permission === "granted") {
+        document.getElementById("notif-status").style.display = "block";
+        new Notification("🕊️ AKASHA — Verset du jour", {
+          body: document.getElementById("verset-text").textContent,
+          icon: "https://beniluxueux-blip.github.io/akasha/favicon.ico"
+        });
+        programmerNotifQuotidienne();
+      }
+    });
+  } else {
+    alert("Ton navigateur ne supporte pas encore les notifications. Reviens chaque matin pour le verset du jour !");
+  }
+}
+
+function programmerNotifQuotidienne() {
+  const maintenant = new Date();
+  const demain7h = new Date();
+  demain7h.setDate(maintenant.getDate() + 1);
+  demain7h.setHours(7, 0, 0, 0);
+  const delai = demain7h - maintenant;
+  setTimeout(function() {
+    const today = new Date();
+    const idx = (today.getDate() + today.getMonth() * 30) % versets.length;
+    const parts = versets[idx].split("|");
+    new Notification("🕊️ AKASHA — Verset du jour", {
+      body: "« " + parts[0] + " » — " + parts[1]
+    });
+    programmerNotifQuotidienne();
+  }, delai);
+}
+
+afficherVerset();
+</script>
+</body>
+</html>
